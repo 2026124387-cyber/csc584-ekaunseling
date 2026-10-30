@@ -1,0 +1,18 @@
+# Compiled / build
+*.class
+target/
+build/
+dist/
+*.war
+
+# IDE
+.idea/
+.vscode/
+nbproject/private/
+.classpath
+.project
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
