@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Database ERD | e-Kaunseling storyboard</title><style>
+:root{--bg:#f3f6f7;--card:#fff;--ink:#16292f;--mut:#5b6e74;--line:#c9d6d9;--pri:#1f6f78;--soft:#dcecee;--acc:#d9534f}
+@media (prefers-color-scheme:dark){:root{--bg:#10191c;--card:#182428;--ink:#e3eef0;--mut:#93a8ad;--line:#2f4349;--pri:#58b6c0;--soft:#1f3438;--acc:#ef7b77}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Segoe UI",system-ui,sans-serif}
+header{padding:2rem 1.25rem 1rem;max-width:1000px;margin:auto}
+h1{font:600 2rem/1.2 Georgia,serif;margin:0 0 .4rem}
+h2{font:600 1.35rem Georgia,serif;margin:2.2rem 0 .6rem}
+h3{font-size:1rem;margin:.2rem 0 .5rem}
+p{margin:.3rem 0;color:var(--mut)}
+nav{position:sticky;top:0;background:var(--card);border-bottom:1px solid var(--line);padding:.5rem 1.25rem;display:flex;gap:1rem;flex-wrap:wrap;z-index:5}
+nav a{color:var(--pri);text-decoration:none;font-weight:600;font-size:.9rem}
+main{max-width:1000px;margin:auto;padding:0 1.25rem 3rem}
+.scroll{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1rem}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{background:var(--soft)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1rem}
+.scr{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.8rem}
+.scr .cap{font-size:.8rem;color:var(--mut);margin-top:.5rem}
+.w{border:1px solid var(--line);border-radius:4px;overflow:hidden;font-size:.8rem;background:var(--bg)}
+.bar{background:var(--pri);color:#fff;padding:.35rem .6rem;display:flex;justify-content:space-between}
+.bar a{color:#fff;text-decoration:none;margin-left:.6rem;font-size:.75rem}
+.body{padding:.7rem}
+.f{display:block;border:1px solid var(--line);background:var(--card);border-radius:3px;padding:.3rem .5rem;margin:.3rem 0 .5rem;color:var(--mut)}
+.b{display:inline-block;background:var(--pri);color:#fff;border-radius:3px;padding:.3rem .8rem;text-decoration:none;font-size:.8rem}
+.b.d{background:var(--acc)}
+.kpi{display:flex;gap:.4rem;margin-bottom:.5rem}
+.kpi div{flex:1;background:var(--card);border:1px solid var(--line);border-radius:3px;padding:.3rem;text-align:center}
+.kpi b{display:block;font-size:1.1rem;color:var(--pri)}
+.bars{display:flex;align-items:flex-end;gap:5px;height:60px;background:var(--card);border:1px solid var(--line);padding:4px}
+.bars i{flex:1;background:var(--pri);display:block}
+.pie{width:60px;height:60px;border-radius:50%;background:conic-gradient(var(--pri) 0 45%,var(--acc) 0 65%,#e0a93b 0 85%,var(--line) 0)}
+.row{display:flex;gap:.6rem;align-items:center}
+svg text{fill:var(--ink);font:12px "Segoe UI",sans-serif}
+svg .t{fill:var(--card);stroke:var(--pri);stroke-width:1.5}
+svg .h{fill:var(--pri)}
+svg .h+text,svg text.hd{fill:#fff;font-weight:700}
+svg .ln{stroke:var(--mut);stroke-width:1.3;fill:none}
+svg .pk{font-weight:700}
+
+.top{background:var(--card);border-bottom:1px solid var(--line);padding:.6rem 1.25rem;display:flex;gap:.9rem;flex-wrap:wrap;align-items:center}
+.top b{font-family:Georgia,serif;margin-right:auto}
+.top a{color:var(--pri);text-decoration:none;font-size:.85rem;font-weight:600}
+.top a.on{border-bottom:2px solid var(--pri)}
+.lay{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:1.25rem;align-items:start}
+@media(max-width:800px){.lay{grid-template-columns:1fr}}
+.w{font-size:.95rem}.w .body{padding:1.2rem}
+.note{background:var(--soft);border-radius:6px;padding:1rem;font-size:.9rem}
+.note h3{margin-top:0}.note ul{padding-left:1.1rem;margin:.3rem 0}
+.bars{height:110px}.pie{width:110px;height:110px}
+</style></head><body>
+<div class="top"><b>e-Kaunseling storyboard</b><a href="index.html">Overview</a><a href="login.html">Login</a><a href="register.html">Register</a><a href="client-dashboard.html">Client</a><a href="counsellor-dashboard.html">Counsellor</a><a href="admin-dashboard.html">Admin</a><a href="appointments.html">Appointments</a><a href="appointment-form.html">Book</a><a href="session-note.html">Note</a><a href="counsellors.html">Manage</a><a href="erd.html" class=on>ERD</a></div><main><h2>Database ERD</h2><p>6 tables (brief requires at least 4). PK = primary key, FK = foreign key. appointments.client_id refers to users.user_id. Status: Pending, Confirmed, Completed, Cancelled.</p><div class="scroll"><svg viewBox="0 0 860 480" width="860" role="img" aria-label="Entity relationship diagram">
+<g class="ln">
+<path d="M240 60H320"/><path d="M240 100H280V330H320"/><path d="M420 146V230"/><path d="M240 390H320"/><path d="M540 280H620"/><path d="M540 400H620"/>
+</g>
+<g style="fill:var(--mut)"><text x="246" y="54">1</text><text x="304" y="54">1</text><text x="246" y="115">1</text><text x="304" y="324">N</text><text x="426" y="165">1</text><text x="426" y="224">N</text><text x="246" y="384">1</text><text x="304" y="384">N</text><text x="544" y="274">1</text><text x="604" y="274">1</text><text x="544" y="394">1</text><text x="604" y="394">0..1</text></g>
+
+<rect class="t" x="20" y="20" width="220" height="166"/><rect class="h" x="20" y="20" width="220" height="26"/><text class="hd" x="30" y="38">users</text>
+<text class="pk" x="30" y="64">PK user_id</text><text x="30" y="84">full_name</text><text x="30" y="104">email (unique)</text><text x="30" y="124">password (hashed)</text><text x="30" y="144">phone</text><text x="30" y="164">role (client/counsellor/admin)</text><text x="30" y="182">created_at</text>
+
+<rect class="t" x="320" y="20" width="220" height="126"/><rect class="h" x="320" y="20" width="220" height="26"/><text class="hd" x="330" y="38">counsellors</text>
+<text class="pk" x="330" y="64">PK counsellor_id</text><text x="330" y="84">FK user_id</text><text x="330" y="104">specialization</text><text x="330" y="124">bio</text><text x="330" y="142">availability_status</text>
+
+<rect class="t" x="20" y="360" width="220" height="66"/><rect class="h" x="20" y="360" width="220" height="26"/><text class="hd" x="30" y="378">categories</text>
+<text class="pk" x="30" y="404">PK category_id</text><text x="30" y="422">category_name</text>
+
+<rect class="t" x="320" y="230" width="220" height="206"/><rect class="h" x="320" y="230" width="220" height="26"/><text class="hd" x="330" y="248">appointments</text>
+<text class="pk" x="330" y="274">PK appointment_id</text><text x="330" y="294">FK client_id (users)</text><text x="330" y="314">FK counsellor_id</text><text x="330" y="334">FK category_id</text><text x="330" y="354">appt_date</text><text x="330" y="374">appt_time</text><text x="330" y="394">status</text><text x="330" y="414">reason</text><text x="330" y="432">created_at</text>
+
+<rect class="t" x="620" y="230" width="220" height="126"/><rect class="h" x="620" y="230" width="220" height="26"/><text class="hd" x="630" y="248">session_notes</text>
+<text class="pk" x="630" y="274">PK note_id</text><text x="630" y="294">FK appointment_id</text><text x="630" y="314">summary</text><text x="630" y="334">recommendation</text><text x="630" y="352">follow_up_date</text>
+
+<rect class="t" x="620" y="370" width="220" height="106"/><rect class="h" x="620" y="370" width="220" height="26"/><text class="hd" x="630" y="388">feedback</text>
+<text class="pk" x="630" y="414">PK feedback_id</text><text x="630" y="434">FK appointment_id</text><text x="630" y="454">rating (1-5)</text><text x="630" y="472">comment</text>
+</svg></div></main></body></html>

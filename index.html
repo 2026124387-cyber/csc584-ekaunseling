@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Page flow and structure | e-Kaunseling storyboard</title><style>
+:root{--bg:#f3f6f7;--card:#fff;--ink:#16292f;--mut:#5b6e74;--line:#c9d6d9;--pri:#1f6f78;--soft:#dcecee;--acc:#d9534f}
+@media (prefers-color-scheme:dark){:root{--bg:#10191c;--card:#182428;--ink:#e3eef0;--mut:#93a8ad;--line:#2f4349;--pri:#58b6c0;--soft:#1f3438;--acc:#ef7b77}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Segoe UI",system-ui,sans-serif}
+header{padding:2rem 1.25rem 1rem;max-width:1000px;margin:auto}
+h1{font:600 2rem/1.2 Georgia,serif;margin:0 0 .4rem}
+h2{font:600 1.35rem Georgia,serif;margin:2.2rem 0 .6rem}
+h3{font-size:1rem;margin:.2rem 0 .5rem}
+p{margin:.3rem 0;color:var(--mut)}
+nav{position:sticky;top:0;background:var(--card);border-bottom:1px solid var(--line);padding:.5rem 1.25rem;display:flex;gap:1rem;flex-wrap:wrap;z-index:5}
+nav a{color:var(--pri);text-decoration:none;font-weight:600;font-size:.9rem}
+main{max-width:1000px;margin:auto;padding:0 1.25rem 3rem}
+.scroll{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1rem}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{background:var(--soft)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1rem}
+.scr{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.8rem}
+.scr .cap{font-size:.8rem;color:var(--mut);margin-top:.5rem}
+.w{border:1px solid var(--line);border-radius:4px;overflow:hidden;font-size:.8rem;background:var(--bg)}
+.bar{background:var(--pri);color:#fff;padding:.35rem .6rem;display:flex;justify-content:space-between}
+.bar a{color:#fff;text-decoration:none;margin-left:.6rem;font-size:.75rem}
+.body{padding:.7rem}
+.f{display:block;border:1px solid var(--line);background:var(--card);border-radius:3px;padding:.3rem .5rem;margin:.3rem 0 .5rem;color:var(--mut)}
+.b{display:inline-block;background:var(--pri);color:#fff;border-radius:3px;padding:.3rem .8rem;text-decoration:none;font-size:.8rem}
+.b.d{background:var(--acc)}
+.kpi{display:flex;gap:.4rem;margin-bottom:.5rem}
+.kpi div{flex:1;background:var(--card);border:1px solid var(--line);border-radius:3px;padding:.3rem;text-align:center}
+.kpi b{display:block;font-size:1.1rem;color:var(--pri)}
+.bars{display:flex;align-items:flex-end;gap:5px;height:60px;background:var(--card);border:1px solid var(--line);padding:4px}
+.bars i{flex:1;background:var(--pri);display:block}
+.pie{width:60px;height:60px;border-radius:50%;background:conic-gradient(var(--pri) 0 45%,var(--acc) 0 65%,#e0a93b 0 85%,var(--line) 0)}
+.row{display:flex;gap:.6rem;align-items:center}
+svg text{fill:var(--ink);font:12px "Segoe UI",sans-serif}
+svg .t{fill:var(--card);stroke:var(--pri);stroke-width:1.5}
+svg .h{fill:var(--pri)}
+svg .h+text,svg text.hd{fill:#fff;font-weight:700}
+svg .ln{stroke:var(--mut);stroke-width:1.3;fill:none}
+svg .pk{font-weight:700}
+
+.top{background:var(--card);border-bottom:1px solid var(--line);padding:.6rem 1.25rem;display:flex;gap:.9rem;flex-wrap:wrap;align-items:center}
+.top b{font-family:Georgia,serif;margin-right:auto}
+.top a{color:var(--pri);text-decoration:none;font-size:.85rem;font-weight:600}
+.top a.on{border-bottom:2px solid var(--pri)}
+.lay{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:1.25rem;align-items:start}
+@media(max-width:800px){.lay{grid-template-columns:1fr}}
+.w{font-size:.95rem}.w .body{padding:1.2rem}
+.note{background:var(--soft);border-radius:6px;padding:1rem;font-size:.9rem}
+.note h3{margin-top:0}.note ul{padding-left:1.1rem;margin:.3rem 0}
+.bars{height:110px}.pie{width:110px;height:110px}
+</style></head><body>
+<div class="top"><b>e-Kaunseling storyboard</b><a href="index.html" class=on>Overview</a><a href="login.html">Login</a><a href="register.html">Register</a><a href="client-dashboard.html">Client</a><a href="counsellor-dashboard.html">Counsellor</a><a href="admin-dashboard.html">Admin</a><a href="appointments.html">Appointments</a><a href="appointment-form.html">Book</a><a href="session-note.html">Note</a><a href="counsellors.html">Manage</a><a href="erd.html">ERD</a></div><main><h2>Page flow and structure</h2><p>Open each page from the menu to follow the flow. Three roles share one login and are redirected by role.</p><div class="scroll"><svg viewBox="0 0 900 330" width="900" role="img" aria-label="Page flow diagram">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5b6e74"/></marker></defs>
+<g class="ln" marker-end="url(#a)">
+<path d="M130 60H190" marker-end="url(#a)"/><path d="M330 60H390" marker-end="url(#a)"/>
+<path d="M530 45L600 20" marker-end="url(#a)"/><path d="M530 60H600" marker-end="url(#a)"/><path d="M530 75L600 100" marker-end="url(#a)"/>
+<path d="M700 45V50"/>
+<path d="M700 140V190" marker-end="url(#a)"/>
+<path d="M700 230V270" marker-end="url(#a)"/>
+<path d="M260 90V190" marker-end="url(#a)"/>
+</g>
+<g>
+<rect class="t" x="30" y="35" width="100" height="50" rx="5"/><text x="55" y="65">Home page</text>
+<rect class="t" x="190" y="35" width="140" height="50" rx="5"/><text x="222" y="65">login.jsp</text>
+<rect class="t" x="390" y="35" width="140" height="50" rx="5"/><text x="400" y="56">LoginServlet</text><text x="400" y="73" style="fill:var(--mut)">check session + role</text>
+<rect class="t" x="600" y="5" width="200" height="30" rx="5"/><text x="612" y="25">Client dashboard.jsp</text>
+<rect class="t" x="600" y="45" width="200" height="30" rx="5"/><text x="612" y="65">Counsellor dashboard.jsp</text>
+<rect class="t" x="600" y="85" width="200" height="30" rx="5"/><text x="612" y="105">Admin dashboard.jsp</text>
+<rect class="t" x="190" y="190" width="140" height="50" rx="5"/><text x="205" y="220">register.jsp</text>
+<rect class="t" x="600" y="190" width="200" height="40" rx="5"/><text x="612" y="215">appointment-list.jsp</text>
+<rect class="t" x="600" y="270" width="200" height="40" rx="5"/><text x="612" y="295">appointment-form.jsp</text>
+<rect class="t" x="390" y="270" width="160" height="40" rx="5"/><text x="402" y="295">session-note.jsp</text>
+<rect class="t" x="30" y="270" width="140" height="40" rx="5"/><text x="48" y="295">LogoutServlet</text>
+</g>
+<g class="ln"><path d="M600 290H550" marker-end="url(#a)"/><path d="M390 290H170" marker-end="url(#a)"/><path d="M130 85L260 190" stroke-dasharray="4 3"/></g>
+<text x="600" y="150" style="fill:var(--mut)">list, create, edit, delete</text>
+</svg></div>
+<div class="scroll" style="margin-top:1rem"><table><tr><th>Page</th><th>Role</th><th>Module</th></tr>
+<tr><td><a href="login.html">Login</a></td><td>All</td><td>Login/Logout</td></tr><tr><td><a href="register.html">Register</a></td><td>Client</td><td>Registration with validation</td></tr>
+<tr><td><a href="appointments.html">Appointments</a>, <a href="appointment-form.html">Book</a>, <a href="session-note.html">Session note</a>, <a href="counsellors.html">Counsellors</a></td><td>Client, Counsellor, Admin</td><td>Information management (CRUD)</td></tr>
+<tr><td><a href="client-dashboard.html">Client</a>, <a href="counsellor-dashboard.html">Counsellor</a>, <a href="admin-dashboard.html">Admin</a> dashboards</td><td>By role</td><td>Dashboard</td></tr>
+<tr><td><a href="erd.html">ERD</a></td><td>-</td><td>Database design (6 tables)</td></tr></table></div></main></body></html>
